@@ -39,7 +39,7 @@ fun MovieSearchBar(modifier: Modifier, hint: String = "", onSearch: (String) -> 
             }),
             maxLines = 1,
             singleLine = true,
-            textStyle = TextStyle(Color.Black),
+            textStyle = TextStyle(Color.White),
             colors = TextFieldDefaults.colors(
                 focusedIndicatorColor = Color.Transparent,
                 unfocusedIndicatorColor = Color.Transparent

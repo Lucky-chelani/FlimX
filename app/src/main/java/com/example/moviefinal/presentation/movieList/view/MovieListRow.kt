@@ -1,6 +1,7 @@
 package com.example.moviefinal.presentation.movieList.view
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -38,12 +39,13 @@ fun MovieListRow(movie: Movie, onItemClick: (Movie) -> Unit) {
             modifier = Modifier
                 .size(160.dp, 200.dp)
                 .clip(RectangleShape)
+                .border(0.4.dp, Color.White , RectangleShape)
         )
 
         Column(
             modifier = Modifier
                 .align(Alignment.CenterVertically)
-                .padding(start = 30.dp)
+                .padding(start = 15.dp)
         ) {
             Text(
                 text = movie.title ?: "No Title",
@@ -51,7 +53,7 @@ fun MovieListRow(movie: Movie, onItemClick: (Movie) -> Unit) {
                 overflow = TextOverflow.Ellipsis,
                 color = Color.White,
                 textAlign = TextAlign.Start,
-                fontSize = 16.sp,
+                fontSize = 18.sp,
                 fontWeight = FontWeight.SemiBold
             )
             Text(
@@ -60,7 +62,8 @@ fun MovieListRow(movie: Movie, onItemClick: (Movie) -> Unit) {
                 overflow = TextOverflow.Ellipsis,
                 color = Color.White,
                 textAlign = TextAlign.End,
-                fontSize = 12.sp
+                fontSize = 16.sp,
+                modifier = Modifier.padding(top = 5.dp)
             )
         }
     }
